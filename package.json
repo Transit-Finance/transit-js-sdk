@@ -1,0 +1,26 @@
+{
+  "name": "@transitswap/js-sdk",
+  "version": "0.0.3",
+  "description": "Transit Swap js SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Transit-Finance/transit-js-sdk.git"
+  },
+  "keywords": [
+    "Transit",
+    "TransitSwap"
+  ],
+  "author": "max@transit.finance",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Transit-Finance/transit-js-sdk/issues"
+  },
+  "homepage": "https://github.com/Transit-Finance/transit-js-sdk#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
