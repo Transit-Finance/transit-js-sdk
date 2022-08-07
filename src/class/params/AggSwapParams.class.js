@@ -17,7 +17,9 @@ class AggSwapParams {
     getString() {
         var str = "?chain=" + this.chain + "&token0=" + this.token0 + "&token1=" + this.token1 + "&decimal0=" + this.decimal0 +
             "&decimal1=" + this.decimal1 + "&to=" + this.to + "&amountIn=" + this.amountIn + "&impact=" + this.impact
-            + "&amountOutMin=" + this.amountOutMin + "&part=" + this.part + "&channel=" + this.channel
+            + "&amountOutMin=" + this.amountOutMin + "&part=" + this.part + "&channel=" + this.channel + "&issuer=" + this.issuer
         return str
     }
 }
+
+module.exports = AggSwapParams 
