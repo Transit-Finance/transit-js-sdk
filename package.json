@@ -1,6 +1,6 @@
 {
   "name": "@transitswap/js-sdk",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Transit Swap js SDK",
   "main": "index.js",
   "scripts": {
