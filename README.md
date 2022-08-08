@@ -70,14 +70,15 @@ const data = {
   amountIn: "1000000000000000000",
   impact: "300",
   amountOutMin: "0",
+  part: 10,
   channel: "Your specified channel",
   issuer: "Your wallet address"
 }
 const res = await transitSwap.swapV1.quoteSwap(data)
 if (res.isSuccess) {
-	console.log("returun data:", res)
+ console.log("returun data:", res)
 } else {
-	console.log("query failure:", res.msg)
+ console.log("query failure:", res.msg)
 }
 ```
 
@@ -86,9 +87,9 @@ if (res.isSuccess) {
 ```
 const res = await transitSwap.swapV1.quoteCrossTokens()
 if (res.isSuccess) {
-	console.log("returun data:", res.getBridgers(),res.getChains(),res.getTokens())
+ console.log("returun data:", res.getBridgers(),res.getChains(),res.getTokens())
 } else {
-	console.log("query failure:", res.msg)
+ console.log("query failure:", res.msg)
 }
 ```
 
@@ -104,9 +105,9 @@ const data = {
 }
 const res = await transitSwap.swapV1.quoteCrossTransferLimit(data)
 if (res.isSuccess) {
-	console.log("returun data:", res.getMaximumSwap(),res.getMinimumSwap())
+ console.log("returun data:", res.getMaximumSwap(),res.getMinimumSwap())
 } else {
-	console.log("query failure:", res.msg)
+ console.log("query failure:", res.msg)
 }
 ```
 
@@ -140,9 +141,9 @@ const data = {
 }
 const res = await transitSwap.swapV1.quoteCrossSwap(data)
 if(res.isSuccess) {
-	//use res.getRouter(),res.getData() to send transaction... 
+ //use res.getRouter(),res.getData() to send transaction... 
 } else {
-	console.log("query failure:",res.msg)
+ console.log("query failure:",res.msg)
 }
 
 // optional
@@ -162,7 +163,7 @@ const callbackData = {
   hash: ${hash}
 }
 if (res.getExchange()=="MetaPath") {
-	await transitSwap.swapV1.CallbackSwap(callbackData)
+ await transitSwap.swapV1.CallbackSwap(callbackData)
 }
 ```
 

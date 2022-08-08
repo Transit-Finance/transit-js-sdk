@@ -63,6 +63,9 @@ async function quoteCrossTransferLimit(info) {
 }
 
 async function quoteSwap(aggSwap) {
+    if (typeof aggSwap.part !== 'number') {
+        aggSwap.part = 10
+    }
     const swapParams = new aggSwapParams(aggSwap)
     const url = TransitDomain + TransitApis.swap + swapParams.getString()
     const result = await httpRequest(true, url, null)
