@@ -101,8 +101,8 @@ async function CallbackSwap(swapCallback) {
     }
 }
 
-async function quoteDetails(hash, chain) {
-    const url = TransitDomain + TransitApis.details + "?hash=" + hash + "&chain=" + chain
+async function quoteDetails(hash) {
+    const url = TransitDomain + TransitApis.details + "?hash=" + hash
     const result = await httpRequest(true, url, null)
     if (result[0]) {
         return new detailsResult({ "result": "Failure", "msg": result[0], "data": null })

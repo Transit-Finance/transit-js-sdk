@@ -1,5 +1,11 @@
 const transitSwap = require("./index")
 
+async function chain() {
+    const chains = await transitSwap.swapV1.getSupportChain()
+    // const chains = await transitSwap.swapV1.getCrossRouter("BSC")
+    console.log(chains)
+}
+
 async function crossTokens() {
     const res = await transitSwap.swapV1.quoteCrossTokens()
     if (res.msg == transitSwap.SUCCESS) {
@@ -49,7 +55,7 @@ async function swap() {
 }
 
 async function details() {
-    const res = await transitSwap.swapV1.quoteDetails("0x0cec30133c4362c9053266e3bc67a5f2d25aac5d0a75a5a46e3cbc37a9a91573", "BSC")
+    const res = await transitSwap.swapV1.quoteDetails("0x0cec30133c4362c9053266e3bc67a5f2d25aac5d0a75a5a46e3cbc37a9a91573")
     if (res.msg == transitSwap.SUCCESS) {
         console.log("returun data:", res)
     } else {
@@ -108,4 +114,5 @@ async function swapCallback() {
 // swap()
 // details()
 // crossSwap()
-swapCallback()
+// swapCallback()
+// chain()
